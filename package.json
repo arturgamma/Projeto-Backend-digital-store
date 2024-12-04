@@ -1,0 +1,33 @@
+{
+  "name": "projeto-back-end-digital-store",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.11.5",
+    "sequelize": "^6.37.5"
+  },
+  "sequelize": {
+    "config": "src/config/db.js",
+    "models-path": "src/models",
+    "migrations-path": "src/migrations",
+    "seeders-path": "src/seeders"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.7",
+    "sequelize-mock": "^0.10.2",
+    "supertest": "^7.0.0"
+  }
+}
