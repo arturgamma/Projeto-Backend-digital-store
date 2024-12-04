@@ -2,7 +2,7 @@ const request = require('supertest'); // Para simular requisições HTTP
 const { Product, Category, ProductOptions, ProductImage } = require('../../src/models');
 const productController = require('../../src/controllers/productController');
 
-// Mock do Sequelize
+
 jest.mock('../../src/models', () => ({
   Product: {
     findOne: jest.fn(),
@@ -15,7 +15,7 @@ jest.mock('../../src/models', () => ({
 describe('Product Controller', () => {
   describe('getProductById', () => {
     test('Deve retornar o produto com sucesso (200)', async () => {
-      // Mock de produto retornado pelo Sequelize
+      
       Product.findOne.mockResolvedValue({
         id: 1,
         name: 'Produto Teste',
@@ -29,7 +29,7 @@ describe('Product Controller', () => {
         images: [{ path: '/path/image1.jpg' }, { path: '/path/image2.jpg' }],
       });
 
-      const req = { params: { id: 1 } }; // Simula a requisição
+      const req = { params: { id: 1 } }; 
       const res = {
         status: jest.fn().mockReturnThis(),
         json: jest.fn(),

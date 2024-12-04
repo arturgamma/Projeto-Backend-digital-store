@@ -15,14 +15,14 @@ module.exports = (sequelize) => {
     {
       sequelize,
       modelName: 'ProductImage',
-      tableName: 'productimages', // Nome real da tabela
+      tableName: 'productimages', 
     }
   );
   ProductImage.associate = (models) => {
     ProductImage.belongsTo(models.Product, {
-      foreignKey: 'product_id', // Nome correto da coluna na tabela productoptions
-      as: 'relatedproductimages',           // Alias para a relação
-    });
+      foreignKey: 'product_id', 
+      as: 'relatedproductimages',           
+    })
   };
   return ProductImage;
 };

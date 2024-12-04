@@ -21,8 +21,7 @@ describe('Category Controller', () => {
       json: jest.fn(),
       send: jest.fn(),
     };
-    jest.clearAllMocks(); // Limpa os mocks antes de cada teste
+    jest.clearAllMocks(); 
   });
 
-  // Adicione os testes abaixo para cada função do controller
 });

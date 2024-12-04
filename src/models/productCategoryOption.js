@@ -16,7 +16,7 @@ module.exports = (sequelize) => {
     {
       sequelize,
       modelName: 'ProductCategoryOption',
-      tableName: 'productcategories', // Nome real da tabela
+      tableName: 'productcategories', 
     }
   );
   return ProductCategoryOption;

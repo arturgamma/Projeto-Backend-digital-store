@@ -3,18 +3,18 @@ const { Model, DataTypes } = require('sequelize');
 module.exports = (sequelize) => {
   class Product extends Model {
     static associate(models) {
-      // Relação com ProductOptions
+      
       Product.hasMany(models.ProductOptions, {
-        foreignKey: 'product_id', // Nome correto da coluna na tabela productoptions
-        as: 'options',           // Alias para a relação
+        foreignKey: 'product_id', 
+        as: 'options',           
       });
 
-      // Relação com Category (muitos-para-muitos)
+      
       Product.belongsToMany(models.Category, {
-        through: 'ProductCategories', // Nome da tabela de junção
-        foreignKey: 'product_id',    // Chave estrangeira na tabela de junção
-        otherKey: 'category_id',     // Outra chave na tabela de junção
-        as: 'categories',            // Alias para a relação
+        through: 'ProductCategories', 
+        foreignKey: 'product_id',    
+        otherKey: 'category_id',     
+        as: 'categories',            
       });
       Product.hasMany(models.ProductImage, {
         foreignKey: 'product_id',
@@ -23,7 +23,7 @@ module.exports = (sequelize) => {
     }
   }
 
-  // Inicialização do modelo
+ 
   Product.init(
     {
       id: {
@@ -100,8 +100,8 @@ module.exports = (sequelize) => {
       sequelize,
       modelName: 'Product',
       tableName: 'products',
-      timestamps: true, // Inclui os campos createdAt e updatedAt automaticamente
-      underscored: true, // Converte nomes como `categoryId` para `category_id` na tabela
+      timestamps: true, 
+      underscored: true, 
     }
   );
 

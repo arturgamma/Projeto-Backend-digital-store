@@ -4,7 +4,6 @@ require('dotenv').config();
 exports.login = (req, res) => {
   const { username, password } = req.body;
 
-  // Simulação de autenticação - ajuste conforme necessário
   if (username === 'admin' && password === 'password') {
     const token = jwt.sign({ id: 1, username }, process.env.JWT_SECRET, { expiresIn: '1h' });
     return res.json({ token });

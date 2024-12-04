@@ -11,14 +11,14 @@ module.exports = (sequelize, DataTypes) => {
     },
     values: DataTypes.STRING,
   }, {
-    tableName: 'productoptions', // Certifique-se de que o nome da tabela está correto
-    underscored: true,          // Para usar snake_case nas colunas
+    tableName: 'productoptions', 
+    underscored: true,
   });
 
   ProductOptions.associate = (models) => {
     ProductOptions.belongsTo(models.Product, {
-      foreignKey: 'product_id', // Nome correto da coluna na tabela productoptions
-      as: 'relatedproductoptions',           // Alias para a relação
+      foreignKey: 'product_id',
+      as: 'relatedproductoptions', 
     });
   };
 
