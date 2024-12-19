@@ -1,3 +1,5 @@
+Equipe: Artur, Raul e Gleidson
+
 # Back-end Digital Store
 
 Este é o projeto de um back-end para uma loja virtual, desenvolvido com Node.js, Express e MySQL. Ele oferece APIs para gerenciar categorias de produtos, usuários e outras funcionalidades essenciais para a administração da loja.
